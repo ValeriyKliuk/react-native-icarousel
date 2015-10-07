@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RCTView.h"
 #import "iCarousel.h"
 
 @interface Carousel : iCarousel <iCarouselDataSource, iCarouselDelegate>

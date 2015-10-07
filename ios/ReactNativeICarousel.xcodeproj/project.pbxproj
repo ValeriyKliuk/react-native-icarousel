@@ -11,16 +11,6 @@
 		7E9C641F1BC40D3300732B19 /* RCTCarouselManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9C641D1BC40D3300732B19 /* RCTCarouselManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7E9C64171BC40C5B00732B19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7E9C64131BC40C5B00732B19 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
-			remoteInfo = React;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		7E9C63E01BC40B2D00732B19 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -35,11 +25,16 @@
 
 /* Begin PBXFileReference section */
 		7E9C63E21BC40B2D00732B19 /* libReactNativeICarousel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeICarousel.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E9C64131BC40C5B00732B19 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "/Users/mateuszderks/workspace/newsshot-reactnative/iOS/../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<absolute>"; };
 		7E9C641A1BC40D3300732B19 /* Carousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carousel.h; sourceTree = "<group>"; };
 		7E9C641B1BC40D3300732B19 /* Carousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carousel.m; sourceTree = "<group>"; };
 		7E9C641C1BC40D3300732B19 /* RCTCarouselManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTCarouselManager.h; sourceTree = "<group>"; };
 		7E9C641D1BC40D3300732B19 /* RCTCarouselManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTCarouselManager.m; sourceTree = "<group>"; };
+		7EE7E01A1BC55204000836DC /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = iCarousel/iCarousel.h; sourceTree = "<group>"; };
+		7EE7E01B1BC55204000836DC /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = iCarousel/iCarousel.m; sourceTree = "<group>"; };
+		7EE7E01C1BC55204000836DC /* iCarousel.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = iCarousel.xcconfig; sourceTree = "<group>"; };
+		7EE7E01D1BC55204000836DC /* iCarousel-Private.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iCarousel-Private.xcconfig"; sourceTree = "<group>"; };
+		7EE7E01E1BC55204000836DC /* iCarousel-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "iCarousel-dummy.m"; sourceTree = "<group>"; };
+		7EE7E01F1BC55204000836DC /* iCarousel-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iCarousel-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +51,7 @@
 		7E9C63D91BC40B2D00732B19 = {
 			isa = PBXGroup;
 			children = (
-				7E9C64131BC40C5B00732B19 /* React.xcodeproj */,
+				7EE7E0211BC55204000836DC /* iCarousel */,
 				7E9C63E41BC40B2D00732B19 /* ReactNativeICarousel */,
 				7E9C63E31BC40B2D00732B19 /* Products */,
 			);
@@ -81,12 +76,27 @@
 			path = ReactNativeICarousel;
 			sourceTree = "<group>";
 		};
-		7E9C64141BC40C5B00732B19 /* Products */ = {
+		7EE7E0201BC55204000836DC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7E9C64181BC40C5B00732B19 /* libReact.a */,
+				7EE7E01C1BC55204000836DC /* iCarousel.xcconfig */,
+				7EE7E01D1BC55204000836DC /* iCarousel-Private.xcconfig */,
+				7EE7E01E1BC55204000836DC /* iCarousel-dummy.m */,
+				7EE7E01F1BC55204000836DC /* iCarousel-prefix.pch */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/iCarousel";
+			sourceTree = "<group>";
+		};
+		7EE7E0211BC55204000836DC /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				7EE7E01A1BC55204000836DC /* iCarousel.h */,
+				7EE7E01B1BC55204000836DC /* iCarousel.m */,
+				7EE7E0201BC55204000836DC /* Support Files */,
+			);
+			name = iCarousel;
+			path = ../../CarouselTest/ios/Pods/iCarousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,28 +143,12 @@
 			mainGroup = 7E9C63D91BC40B2D00732B19;
 			productRefGroup = 7E9C63E31BC40B2D00732B19 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7E9C64141BC40C5B00732B19 /* Products */;
-					ProjectRef = 7E9C64131BC40C5B00732B19 /* React.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				7E9C63E11BC40B2D00732B19 /* ReactNativeICarousel */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		7E9C64181BC40C5B00732B19 /* libReact.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libReact.a;
-			remoteRef = 7E9C64171BC40C5B00732B19 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E9C63DE1BC40B2D00732B19 /* Sources */ = {
@@ -204,7 +198,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -240,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -250,6 +244,10 @@
 		7E9C63EC1BC40B2D00732B19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -259,6 +257,10 @@
 		7E9C63ED1BC40B2D00732B19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
